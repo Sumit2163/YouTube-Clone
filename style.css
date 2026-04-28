@@ -17,7 +17,7 @@ button{
 }
 
 .container-boxes{
-    margin: 20px;
+    margin: 25px 20px;
     display: grid;
     grid-template-columns: 400px 400px 400px;
     column-gap: 40px;
@@ -57,19 +57,38 @@ button{
     margin-left: 10px;
 }
 
-@media screen and (max-width: 480px) {
-    body{
-        padding: 0px;
-    }
-    .container-boxes{
-        margin-top: 80px;
-    display: grid;
-    grid-template-columns: 250px;
-    margin-left: 0px;
-}
-.video-title{
-    width: 270px;
-    font-size: 16px;
+@media screen and (max-width: 1025px) {
+  body {
+    padding-left: 0;     /* remove sidebar space */
+    padding-right: 0;
+  }
+
+  .container-boxes {
+    padding-left: 7vh;
+    margin: 25px;           /* remove side gaps */
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .thumbnail {
+    width: 100%;         /* full width video */
+  }
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    padding-left: 0;     /* remove sidebar space */
+    padding-right: 0;
+  }
+
+  .container-boxes {
+    padding-left: 0;
+    margin: 0;           /* remove side gaps */
+    grid-template-columns: 1fr;
+  }
+
+  .thumbnail {
+    width: 100%;         /* full width video */
+  }
 }
+
+
